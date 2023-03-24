@@ -1,0 +1,39 @@
+.SprintDetailsMainBox{
+    /* width: 80%; */
+    border: 1px solid red;
+}
+
+.SprintDetailsMainBox>h2{
+    padding: 5px 5px;
+    width: 98%;
+    margin: 8px auto;
+    background-color: rgb(215, 215, 215);
+}
+
+.CreateNewTaskBox{
+    border: 1px solid rgb(168, 168, 168);
+    width: 97%;
+    margin: auto;
+    box-sizing: border-box;
+    padding: 0px 5px;
+    border-radius: 10px;
+}
+
+.CreateNewTaskBox>div{
+    width: 100%;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.CreateNewTaskBox>div select{
+    width: 50%;
+}
+
+.CreateNewTaskBox>div>label{
+    width: 50%;
+}
+.CreateNewTaskBox>div>textarea{
+    width: 100%;
+}

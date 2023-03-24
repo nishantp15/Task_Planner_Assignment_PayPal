@@ -1,0 +1,57 @@
+.SidebarMainBox{
+    width: 20%;
+    /* border: 1px solid red; */
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(227, 241, 253);
+}
+
+.SidebarMainBox>h2{
+    margin: 0;
+    color: rgb(40, 53, 72);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid rgb(180, 176, 176);
+}
+
+
+.SprintCreateButton{
+    margin: 15px 0px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    background-color: rgb(65, 65, 67);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.SprintList{
+    width: 80%;
+    /* border: 1px solid red; */
+}
+
+.SprintTitle{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.SprintTitle>h4{
+    margin: 0;
+    width: 60%;
+    /* border: 1px solid red; */
+    overflow: hidden;
+}
+
+.DeleteIcon{
+    font-size: 20px;
+}

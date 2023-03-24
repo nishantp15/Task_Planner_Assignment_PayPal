@@ -1,0 +1,12 @@
+.NavMainBox{
+    background-color: rgb(10, 32, 71);
+    height: 5vw;
+    display: flex;
+    align-items: center;
+}
+
+.NavMainBox>h1{
+    color: white;
+    margin: 0;
+    margin-left: 10px;
+}

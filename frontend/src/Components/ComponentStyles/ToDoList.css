@@ -1,0 +1,55 @@
+.ToDoListMainBox{
+    width: 100%;
+    margin: auto;
+    border: 1px solid red;
+    box-sizing: border-box;
+    margin-top: 5px;
+}
+
+.TaskOptions{
+    width: 96%;
+    margin: 10px auto;
+}
+
+.TaskOptions>button{
+    height: 32px;
+    width: 20%;
+    margin-right: 20px;
+    cursor: pointer;
+    background-color: rgb(142, 197, 142);
+    border: none;
+    border-radius: 5px;
+}
+
+.ToDoListDispaly{
+    width: 96%;
+    margin: auto;
+    border: 1px solid red;
+}
+
+.ToDoListDispaly>table{
+    width: 100%;
+
+}
+
+table{
+    width: 90%;
+    margin: auto;
+    border-collapse: collapse;
+}
+
+th{
+    color: white;
+    font-weight: 600;
+    background-color: rgb(13, 86, 110);
+}
+tr:nth-child(odd){
+    background-color: white;
+}
+tr:nth-child(even){
+    background-color: rgb(217, 214, 214);
+}
+td{
+    max-width: fit-content;
+    text-align: center;
+}

@@ -1,0 +1,11 @@
+.DashBoardMainBox{
+    display: flex;
+    width: 100%;
+    /* border: 1px solid red; */
+}
+
+.DashBoardSubMainBox{
+ width: 80%;
+ /* border: 1px solid red; */
+
+}
