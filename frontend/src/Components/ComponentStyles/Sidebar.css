@@ -1,7 +1,7 @@
 .SidebarMainBox{
     width: 20%;
     /* border: 1px solid red; */
-    height: 400px;
+    height: 550px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -34,6 +34,8 @@
 
 .SprintList{
     width: 80%;
+    overflow-y: auto;
+    overflow-x: hidden;
     /* border: 1px solid red; */
 }
 
@@ -43,6 +45,8 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 10px;
+    padding: 5px 1px;
+    border-radius: 5px;
 }
 
 .SprintTitle>h4{
@@ -50,8 +54,19 @@
     width: 60%;
     /* border: 1px solid red; */
     overflow: hidden;
+    cursor: pointer;
+}
+
+.SprintTitle>h4:hover{
+    color: rgb(59, 74, 164);
 }
 
 .DeleteIcon{
     font-size: 20px;
+    cursor: pointer;
+
+}
+
+.DeleteIcon:hover{
+    color: red;
 }

@@ -4,14 +4,43 @@ import { MdDelete } from "react-icons/md";
 import { IoMdAdd } from "react-icons/io";
 import SprintCreateModal from "./SprintCreateModal";
 import { useState } from "react";
-const Sidebar = () => {
-  let [ModalDisplay, setModalDisplay] = useState(false)
-  function ShowSprintCreateModal(){
-    setModalDisplay(true)
+import { useEffect } from "react";
+const Sidebar = ({SelectedSprint, Sprint}) => {
+  let [ModalDisplay, setModalDisplay] = useState(false);
+  let [SprintList, setSprintList] = useState([]);
+  let url = "http://localhost:3001/sprintList";
+  useEffect(() => {
+    fetch(url)
+      .then((res) => res.json())
+      .then((val) => {
+        setSprintList(val);
+      });
+  }, []);
+
+  function ShowSprintCreateModal() {
+    setModalDisplay(true);
   }
-  function HideCreateSprintModalFun(){
-    setModalDisplay(false)
-}
+  function HideCreateSprintModalFun() {
+    setModalDisplay(false);
+  }
+
+  function UpdateSprintList(data){
+    setSprintList((prev)=>[...prev,data])
+  }
+
+  function DeleteSprint(id, sprintName){
+    fetch(`http://localhost:3001/sprintList/${id}`, {
+      method:"DELETE"
+    }).then(res=>res.json()).then(val=>{
+      let data = [...SprintList].filter((ele)=>{
+        return ele.sprintName!=sprintName;
+      })
+      setSprintList(data);
+      console.log(sprintName);
+
+    });
+    alert("Sprint deleted")
+  }
 
   return (
     <div className="SidebarMainBox">
@@ -20,21 +49,21 @@ const Sidebar = () => {
         <IoMdAdd /> Create Sprint
       </button>
 
-      <SprintCreateModal modal = {ModalDisplay} HideModal={HideCreateSprintModalFun} />
+      <SprintCreateModal
+        modal={ModalDisplay}
+        HideModal={HideCreateSprintModalFun}
+        UpdateList={UpdateSprintList}
+      />
 
       <div className="SprintList">
-        <div className="SprintTitle">
-          <h4>Sprint 1</h4>
-          <MdDelete className="DeleteIcon" />
-        </div>
-        <div className="SprintTitle">
-          <h4>Sprint 1</h4>
-          <MdDelete className="DeleteIcon" />
-        </div>
-        <div className="SprintTitle">
-          <h4>Sprint 1</h4>
-          <MdDelete className="DeleteIcon" />
-        </div>
+        {SprintList.map((ele,ind) => {
+          return (
+            <div className="SprintTitle" key={ind+1} style={ele.sprintName==Sprint.sprintName ? {backgroundColor:"rgb(55, 23, 97)", color:"white"}:{backgroundColor:"inherit"}}>
+              <h4 onClick={()=>{SelectedSprint(ele); console.log(Sprint)}}>{ele.sprintName}</h4>
+              <MdDelete className="DeleteIcon" onClick={()=>{DeleteSprint(ele.id, ele.sprintName)}}/>
+            </div>
+          );
+        })}
       </div>
     </div>
   );

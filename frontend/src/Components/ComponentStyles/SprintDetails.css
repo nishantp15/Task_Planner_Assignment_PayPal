@@ -1,6 +1,6 @@
 .SprintDetailsMainBox{
-    /* width: 80%; */
-    border: 1px solid red;
+    width: 100%;
+    /* border: 1px solid red; */
 }
 
 .SprintDetailsMainBox>h2{
@@ -17,9 +17,10 @@
     box-sizing: border-box;
     padding: 0px 5px;
     border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-.CreateNewTaskBox>div{
+.CreateNewTaskBox>form>div{
     width: 100%;
     /* border: 1px solid red; */
     display: flex;
@@ -27,13 +28,29 @@
     margin-bottom: 10px;
 }
 
-.CreateNewTaskBox>div select{
+.CreateNewTaskBox>form>div>button{
+    width: 20%;
+    height: 26px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(114, 57, 188);
+    cursor: pointer;
+}
+
+.CreateNewTaskBox>h4{
+    margin: 5px 0px;
+    background-color: bisque;
+    border-radius: 5px;
+}
+
+.CreateNewTaskBox>form>div select{
     width: 50%;
 }
 
-.CreateNewTaskBox>div>label{
+.CreateNewTaskBox>form>div>label{
     width: 50%;
 }
-.CreateNewTaskBox>div>textarea{
+.CreateNewTaskBox>form>div>textarea{
     width: 100%;
 }

@@ -1,11 +1,12 @@
 import React from "react";
 import "./ComponentStyles/SprintDetails.css";
-const SprintDetails = () => {
+const SprintDetails = ({Data}) => {
   return (
     <div className="SprintDetailsMainBox">
       <h2>Sprint 1</h2>
       <div className="CreateNewTaskBox">
         <h4>Create New Task</h4>
+        <form action="">
         <div>
           <label htmlFor="">
             Project Name* <input type="text" />
@@ -36,6 +37,7 @@ const SprintDetails = () => {
         <div>
             <button>Create Task</button>
         </div>
+        </form>
       </div>
     </div>
   );
