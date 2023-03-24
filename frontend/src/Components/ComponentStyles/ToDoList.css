@@ -56,3 +56,21 @@ td{
     max-width: fit-content;
     text-align: center;
 }
+
+.DeleteTask{
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.EditTaskList{
+    font-size: 22px;
+    cursor:pointer;
+}
+
+.EditTaskList:hover{
+    color: green;
+}
+
+.DeleteTask:hover{
+    color: red;
+}

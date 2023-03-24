@@ -2,7 +2,7 @@ import React from "react";
 import "./ComponentStyles/Sidebar.css";
 import { MdDelete } from "react-icons/md";
 import { IoMdAdd } from "react-icons/io";
-import SprintCreateModal from "./SprintCreateModal";
+import SprintCreateModal from "./EditTaskModal";
 import { useState } from "react";
 import { useEffect } from "react";
 const Sidebar = ({SelectedSprint, Sprint}) => {

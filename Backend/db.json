@@ -19,54 +19,32 @@
     {
       "sprintName": "Sprint 5",
       "id": 13
-    },
-    {
-      "sprintName": "Sprint 6",
-      "id": 14
-    },
-    {
-      "sprintName": "Sprint 7",
-      "id": 15
-    },
-    {
-      "sprintName": "Sprint 8",
-      "id": 16
     }
   ],
   "TaskList": [
     {
-      "id":1,
-      "sprintName":"Sprint 1",
+      "id": 1,
+      "sprintName": "Sprint 1",
+      "project": "New",
+      "user": "user1",
+      "assignee": "assignee1",
+      "issueType": "issueType1",
+      "summary": "summary",
+      "status": "In Progress"
+    },
+    {
+      "id": 2,
+      "sprintName": "Sprint 1",
       "project": "a",
       "user": "user1",
       "assignee": "assignee1",
       "issueType": "issueType1",
       "summary": "summary",
-      "status": "complete"
+      "status": "Incomplete"
     },
     {
-      "id":2,
-      "sprintName":"Sprint 1",
-      "project": "a",
-      "user": "user1",
-      "assignee": "assignee1",
-      "issueType": "issueType1",
-      "summary": "summary",
-      "status": "incomplete"
-    },
-    {
-      "id":3,
-      "sprintName":"Sprint 2",
-      "project": "a",
-      "user": "user1",
-      "assignee": "assignee1",
-      "issueType": "issueType1",
-      "summary": "summary",
-      "status": "incomplete"
-    },
-    {
-      "id":4,
-      "sprintName":"Sprint 3",
+      "id": 4,
+      "sprintName": "Sprint 3",
       "project": "a",
       "user": "user11",
       "assignee": "assignee11",
@@ -75,24 +53,34 @@
       "status": "incomplete"
     },
     {
-      "id":5,
-      "sprintName":"Sprint 3",
-      "project": "a",
-      "user": "user12",
-      "assignee": "assignee1",
-      "issueType": "issueType1",
-      "summary": "summary",
-      "status": "incomplete"
+      "sprintName": "Sprint 2",
+      "project": "get",
+      "user": "tbe",
+      "assignee": "dvsgfsgf",
+      "issueType": "Bug",
+      "summary": "tb",
+      "status": "Incomplete",
+      "id": 8
     },
     {
-      "id":6,
-      "sprintName":"Sprint 3",
-      "project": "a",
-      "user": "user1",
-      "assignee": "assignee1",
-      "issueType": "issueType1",
-      "summary": "summary",
-      "status": "incomplete"
+      "sprintName": "Sprint 2",
+      "project": "Skynetv2",
+      "user": "Abhay",
+      "assignee": "Avya",
+      "issueType": "Bug",
+      "summary": "Complete Urgent",
+      "status": "Completed",
+      "id": 9
+    },
+    {
+      "sprintName": "Sprint 4",
+      "project": "New",
+      "user": "New",
+      "assignee": "auto",
+      "issueType": "Feature",
+      "summary": "auto",
+      "status": "Incomplete",
+      "id": 10
     }
   ]
 }
