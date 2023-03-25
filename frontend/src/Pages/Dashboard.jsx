@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import Sidebar from "../Components/Sidebar";
-import SprintDetails from "../Components/SprintDetails";
+import SprintDetails from "../Components/CreateNewTask";
 import ToDoList from "../Components/ToDoList";
 import "./Dashboard.css";
 

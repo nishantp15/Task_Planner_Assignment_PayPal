@@ -17,6 +17,8 @@
     box-sizing: border-box;
     padding: 0px 5px;
     border-radius: 10px;
+    background-color: rgb(219, 219, 219);
+    /* color: white; */
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
@@ -34,14 +36,18 @@
     border: none;
     border-radius: 5px;
     color: white;
-    background-color: rgb(114, 57, 188);
+    background-color: rgb(50, 25, 82);
     cursor: pointer;
 }
 
 .CreateNewTaskBox>h4{
     margin: 5px 0px;
-    background-color: bisque;
+    padding: 0px 5px;
+    background-color: rgb(62, 61, 61);
+    color: white;
     border-radius: 5px;
+    width: 98%;
+    height: 26px;
 }
 
 .CreateNewTaskBox>form>div select{

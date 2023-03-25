@@ -1,0 +1,23 @@
+.AlertToastMainBox{
+    width: 28%;
+    background-color: rgb(255, 207, 117);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 10;
+    height: 40px;
+    top: 60px;
+    left: 38%;
+    display: none;
+}
+
+.AlertIcon{
+    font-size: 22px;
+    color:rgb(2, 123, 2);
+    margin-left: 20px;
+}
+
+.Deleted{
+    color:red
+}

@@ -26,8 +26,12 @@ const SprintCreateModal = ({SprintModal, HideSprintModal, UpdateList}) => {
 
   return (
     <div className={SprintModal? "CreateSprintModalMainBox ShowSprintModal":"CreateSprintModalMainBox HideSprintModal"}>
-      <div className="ModalCancelHeader">
+      <div className="SprintCreateModalCancelHeader">
+        <div>
+          <h4>Create sprint</h4>
+        </div>
         <button onClick={()=>HideSprintModal()}><RxCross1/></button>
+        
       </div>
       <div className="CreateSprintBox">
         <input type="text" placeholder="Enter/Edit Sprint Name..." value={CreatedSprintName} onChange={(e)=>setCreatedSprintName(e.target.value)}/>

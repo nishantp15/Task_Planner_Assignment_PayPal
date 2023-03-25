@@ -1,8 +1,8 @@
 import React from "react";
 import { useState } from "react";
-import "./ComponentStyles/SprintDetails.css";
+import "./ComponentStyles/CreateNewTask.css";
 
-const SprintDetails = ({ Data, isUpdated }) => {
+const CreateNewTask = ({ Data, isUpdated }) => {
   let InitialFormData = {
     sprintName: "",
     project: "",
@@ -12,6 +12,7 @@ const SprintDetails = ({ Data, isUpdated }) => {
     summary: "",
     status: "Incomplete",
   };
+
   let [FormData, setFormData] = useState({ ...InitialFormData });
 
   function FormDataFunc(e) {
@@ -21,7 +22,7 @@ const SprintDetails = ({ Data, isUpdated }) => {
 
   function CreateTaskFunc(e) {
     e.preventDefault();
-    if (FormData.sprintName === "") {
+    if (Data.sprintName === "") {
       alert("Select sprint first !");
     } else if (FormData.project === "" && FormData.issueType === "") {
       alert("Incomplete details");
@@ -36,7 +37,8 @@ const SprintDetails = ({ Data, isUpdated }) => {
           return res.json();
         })
         .then((val) => {
-            isUpdated(false)
+            isUpdated(false);
+            setFormData(InitialFormData)
           console.log(val);
         });
     }
@@ -114,4 +116,4 @@ const SprintDetails = ({ Data, isUpdated }) => {
   );
 };
 
-export default SprintDetails;
+export default CreateNewTask;

@@ -3,9 +3,13 @@ import "./ComponentStyles/EditTaskModal.css";
 import { RxCross1 } from "react-icons/rx";
 import { useState } from "react";
 import { useEffect } from "react";
+import AlertToast from "./AlertToast";
+
 let InitData = { project: "", user: "", assignee: "", summary: "", status: "" };
+
 const EditTaskModal = ({ EditModal, HideEditModal, data = InitData, edited }) => {
   let [FormDataModal, setFormDataModal] = useState(data);
+  let [AlertDisplay, setAlertDisplay] = useState(false);
 
   useEffect(() => {
     setFormDataModal(data);
@@ -31,6 +35,7 @@ const EditTaskModal = ({ EditModal, HideEditModal, data = InitData, edited }) =>
       })
       .then((val) => {
         edited(false)
+        
         console.log(val);
       });
     HideEditModal();
@@ -99,6 +104,8 @@ const EditTaskModal = ({ EditModal, HideEditModal, data = InitData, edited }) =>
           <button onClick={UpdateEditedData}>Save</button>
         </form>
       </div>
+
+      <AlertToast/>
     </div>
   );
 };
