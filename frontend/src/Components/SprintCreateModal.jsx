@@ -2,7 +2,7 @@ import React from "react";
 import "./ComponentStyles/SprintCreateModal.css";
 import {RxCross1} from 'react-icons/rx'
 import { useState } from "react";
-const SprintCreateModal = ({modal, HideModal, UpdateList}) => {
+const SprintCreateModal = ({SprintModal, HideSprintModal, UpdateList}) => {
   let [CreatedSprintName, setCreatedSprintName] = useState("");
 
   let url = " http://localhost:3001/sprintList";
@@ -16,7 +16,7 @@ const SprintCreateModal = ({modal, HideModal, UpdateList}) => {
       }).then(res=>res.json()).then(val=>{
         UpdateList(val);
         console.log(val)});
-        HideModal();
+        HideSprintModal();
         alert("New sprint created");
         setCreatedSprintName("");
     }else{
@@ -25,9 +25,9 @@ const SprintCreateModal = ({modal, HideModal, UpdateList}) => {
   }
 
   return (
-    <div className={modal? "CreateSprintModalMainBox ShowModal":"CreateSprintModalMainBox HideModal"}>
+    <div className={SprintModal? "CreateSprintModalMainBox ShowSprintModal":"CreateSprintModalMainBox HideSprintModal"}>
       <div className="ModalCancelHeader">
-        <button onClick={()=>HideModal()}><RxCross1/></button>
+        <button onClick={()=>HideSprintModal()}><RxCross1/></button>
       </div>
       <div className="CreateSprintBox">
         <input type="text" placeholder="Enter/Edit Sprint Name..." value={CreatedSprintName} onChange={(e)=>setCreatedSprintName(e.target.value)}/>

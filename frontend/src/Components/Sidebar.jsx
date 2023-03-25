@@ -2,11 +2,11 @@ import React from "react";
 import "./ComponentStyles/Sidebar.css";
 import { MdDelete } from "react-icons/md";
 import { IoMdAdd } from "react-icons/io";
-import SprintCreateModal from "./EditTaskModal";
+import SprintCreateModal from "./SprintCreateModal";
 import { useState } from "react";
 import { useEffect } from "react";
 const Sidebar = ({SelectedSprint, Sprint}) => {
-  let [ModalDisplay, setModalDisplay] = useState(false);
+  let [SprintModalDisplay, setSprintModalDisplay] = useState(false);
   let [SprintList, setSprintList] = useState([]);
   let url = "http://localhost:3001/sprintList";
   useEffect(() => {
@@ -18,10 +18,10 @@ const Sidebar = ({SelectedSprint, Sprint}) => {
   }, []);
 
   function ShowSprintCreateModal() {
-    setModalDisplay(true);
+    setSprintModalDisplay(true);
   }
   function HideCreateSprintModalFun() {
-    setModalDisplay(false);
+    setSprintModalDisplay(false);
   }
 
   function UpdateSprintList(data){
@@ -50,8 +50,8 @@ const Sidebar = ({SelectedSprint, Sprint}) => {
       </button>
 
       <SprintCreateModal
-        modal={ModalDisplay}
-        HideModal={HideCreateSprintModalFun}
+        SprintModal={SprintModalDisplay}
+        HideSprintModal={HideCreateSprintModalFun}
         UpdateList={UpdateSprintList}
       />
 

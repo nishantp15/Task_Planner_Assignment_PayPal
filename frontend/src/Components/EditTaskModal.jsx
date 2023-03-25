@@ -4,7 +4,7 @@ import { RxCross1 } from "react-icons/rx";
 import { useState } from "react";
 import { useEffect } from "react";
 let InitData = { project: "", user: "", assignee: "", summary: "", status: "" };
-const EditTaskModal = ({ modal, HideModal, data = InitData, edited }) => {
+const EditTaskModal = ({ EditModal, HideEditModal, data = InitData, edited }) => {
   let [FormDataModal, setFormDataModal] = useState(data);
 
   useEffect(() => {
@@ -34,7 +34,7 @@ const EditTaskModal = ({ modal, HideModal, data = InitData, edited }) => {
         edited(false)
         console.log(val);
       });
-    HideModal();
+    HideEditModal();
 
     console.log(FormDataModal);
   }
@@ -42,13 +42,13 @@ const EditTaskModal = ({ modal, HideModal, data = InitData, edited }) => {
   return (
     <div
       className={
-        modal
-          ? "EditTaskModalMainBox ShowModal"
-          : "EditTaskModalMainBox HideModal"
+        EditModal
+          ? "EditTaskModalMainBox ShowEditModal"
+          : "EditTaskModalMainBox HideEditModal"
       }
     >
       <div className="ModalCancelHeader">
-        <button onClick={() => HideModal()}>
+        <button onClick={() => HideEditModal()}>
           <RxCross1 />
         </button>
       </div>

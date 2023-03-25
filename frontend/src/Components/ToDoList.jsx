@@ -103,8 +103,8 @@ const ToDoList = ({ Data, UpdateList }) => {
         </table>
       </div>
       <EditTaskModal
-        modal={EditTaskModalDisplay}
-        HideModal={HideEditTaskModalFun}
+        EditModal={EditTaskModalDisplay}
+        HideEditModal={HideEditTaskModalFun}
         data = {EditTaskData}
         edited = {IsDataEditedFunc}
       />
