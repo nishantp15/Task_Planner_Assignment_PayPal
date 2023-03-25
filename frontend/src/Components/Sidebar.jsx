@@ -8,7 +8,7 @@ import { useEffect } from "react";
 const Sidebar = ({SelectedSprint, Sprint}) => {
   let [SprintModalDisplay, setSprintModalDisplay] = useState(false);
   let [SprintList, setSprintList] = useState([]);
-  let url = "http://localhost:3001/sprintList";
+  let url = "https://taskplanner-ytz0.onrender.com/sprintList";
   useEffect(() => {
     fetch(url)
       .then((res) => res.json())
@@ -29,7 +29,7 @@ const Sidebar = ({SelectedSprint, Sprint}) => {
   }
 
   function DeleteSprint(id, sprintName){
-    fetch(`http://localhost:3001/sprintList/${id}`, {
+    fetch(`https://taskplanner-ytz0.onrender.com/sprintList/${id}`, {
       method:"DELETE"
     }).then(res=>res.json()).then(val=>{
       let data = [...SprintList].filter((ele)=>{
@@ -60,7 +60,7 @@ const Sidebar = ({SelectedSprint, Sprint}) => {
           return (
             <div className="SprintTitle" key={ind+1} style={ele.sprintName==Sprint.sprintName ? {backgroundColor:"rgb(55, 23, 97)", color:"white"}:{backgroundColor:"inherit"}}>
               <h4 onClick={()=>{SelectedSprint(ele); console.log(Sprint)}}>{ele.sprintName}</h4>
-              <MdDelete className="DeleteIcon" onClick={()=>{DeleteSprint(ele.id, ele.sprintName)}}/>
+              <MdDelete className="DeleteIcon" onClick={()=>{DeleteSprint(ele._id, ele.sprintName)}}/>
             </div>
           );
         })}

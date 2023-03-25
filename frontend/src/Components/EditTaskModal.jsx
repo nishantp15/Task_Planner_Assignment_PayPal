@@ -11,7 +11,7 @@ const EditTaskModal = ({ EditModal, HideEditModal, data = InitData, edited }) =>
     setFormDataModal(data);
   }, [data]);
 
-  let url = " http://localhost:3001/sprintList";
+  let url = "https://taskplanner-ytz0.onrender.com//sprintList";
 
   function EditedFormDataFunc(e) {
     let { name, value } = e.target;
@@ -21,7 +21,7 @@ const EditTaskModal = ({ EditModal, HideEditModal, data = InitData, edited }) =>
   function UpdateEditedData(e) {
     e.preventDefault();
 
-    fetch(`http://localhost:3001/TaskList/${FormDataModal.id}`, {
+    fetch(`https://taskplanner-ytz0.onrender.com/tasklist/${FormDataModal._id}`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(FormDataModal),

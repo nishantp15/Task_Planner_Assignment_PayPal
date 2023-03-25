@@ -6,7 +6,7 @@ import {AiFillEdit} from 'react-icons/ai'
 import "./ComponentStyles/ToDoList.css";
 import EditTaskModal from "./EditTaskModal";
 const ToDoList = ({ Data, UpdateList }) => {
-  let taskUrl = `http://localhost:3001/TaskList`;
+  let taskUrl = `https://taskplanner-ytz0.onrender.com/tasklist`;
   let [TaskListData, setTaskListData] = useState([]);
   let[EditTaskModalDisplay,setEditTaskModalDisplay] = useState(false);
   let [EditTaskData, setEditTaskData] = useState({})
@@ -24,14 +24,14 @@ const ToDoList = ({ Data, UpdateList }) => {
   }, [Data, UpdateList, isEdited]);
 
   function DeleteTaskFun(id) {
-    fetch(`http://localhost:3001/TaskList/${id}`, {
+    fetch(`https://taskplanner-ytz0.onrender.com/tasklist/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
       .then((val) => {
         console.log(val);
         let UpdatedListArray = [...TaskListData].filter((ele)=>{
-            return ele.id!==id
+            return ele._id!==id
         })
         setTaskListData(UpdatedListArray);
       });
@@ -73,7 +73,7 @@ const ToDoList = ({ Data, UpdateList }) => {
           <tbody>
             {TaskListData.length===0 ? <tr><td>No task assigned yet! 🔎</td></tr> : TaskListData.map((ele) => {
               return (
-                <tr key={ele.id}>
+                <tr key={ele._id}>
                   <td>{ele.project}</td>
                   <td>{ele.issueType}</td>
                   <td>{ele.summary}</td>
@@ -92,7 +92,7 @@ const ToDoList = ({ Data, UpdateList }) => {
                   <td className="EditTaskList"><AiFillEdit onClick={()=>ShowEditTaskModal(ele)}/></td>
                   <td
                     className="DeleteTask"
-                    onClick={() => DeleteTaskFun(ele.id)}
+                    onClick={() => DeleteTaskFun(ele._id)}
                   >
                     <MdDelete />
                   </td>

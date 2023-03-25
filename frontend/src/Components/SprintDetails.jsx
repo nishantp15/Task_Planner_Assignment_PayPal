@@ -26,7 +26,7 @@ const SprintDetails = ({ Data, isUpdated }) => {
     } else if (FormData.project === "" && FormData.issueType === "") {
       alert("Incomplete details");
     } else {
-      fetch(`http://localhost:3001/TaskList`, {
+      fetch(`https://taskplanner-ytz0.onrender.com/tasklist`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(FormData),

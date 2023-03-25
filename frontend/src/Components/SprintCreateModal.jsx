@@ -5,7 +5,7 @@ import { useState } from "react";
 const SprintCreateModal = ({SprintModal, HideSprintModal, UpdateList}) => {
   let [CreatedSprintName, setCreatedSprintName] = useState("");
 
-  let url = " http://localhost:3001/sprintList";
+  let url = " https://taskplanner-ytz0.onrender.com/sprintList";
 
   function CreateSprintFunc(){
     if(CreatedSprintName!==""){
