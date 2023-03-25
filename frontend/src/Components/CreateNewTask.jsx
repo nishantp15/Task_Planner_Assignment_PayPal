@@ -46,7 +46,7 @@ const CreateNewTask = ({ Data, isUpdated }) => {
 
   return (
     <div className="SprintDetailsMainBox">
-      <h2>{Data.sprintName===undefined ? "Please select sprint...":Data.sprintName}</h2>
+      {Data.sprintName===undefined ? <h2 style={{color:"red"}}>Please select sprint...</h2>: <h2>{Data.sprintName}</h2>}
       <div className="CreateNewTaskBox">
         <h4>Create New Task</h4>
         <form action="">

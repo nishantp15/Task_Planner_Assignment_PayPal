@@ -56,6 +56,7 @@ const Sidebar = ({SelectedSprint, Sprint}) => {
       />
 
       <div className="SprintList">
+        <div className="SprintSelectionTable">Select sprint from below</div>
         {SprintList.map((ele,ind) => {
           return (
             <div className="SprintTitle" key={ind+1} style={ele.sprintName===Sprint.sprintName ? {backgroundColor:"rgb(55, 23, 97)", color:"white"}:{backgroundColor:"inherit"}}>

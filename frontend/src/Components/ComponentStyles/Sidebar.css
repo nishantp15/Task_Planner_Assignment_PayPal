@@ -70,3 +70,16 @@
 .DeleteIcon:hover{
     color: red;
 }
+
+.SprintSelectionTable{
+    width: 100%;
+    background-color: rgb(65, 65, 67);
+    color: white;
+    font-size: 16px;
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
