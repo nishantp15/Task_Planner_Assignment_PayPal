@@ -9,7 +9,7 @@ let InitData = { project: "", user: "", assignee: "", summary: "", status: "" };
 
 const EditTaskModal = ({ EditModal, HideEditModal, data = InitData, edited }) => {
   let [FormDataModal, setFormDataModal] = useState(data);
-  let [AlertDisplay, setAlertDisplay] = useState(false);
+  // let [AlertDisplay, setAlertDisplay] = useState(false);
 
   useEffect(() => {
     setFormDataModal(data);
