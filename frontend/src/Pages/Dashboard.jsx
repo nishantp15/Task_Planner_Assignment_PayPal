@@ -1,7 +1,5 @@
 import React from "react";
-import { useEffect } from "react";
 import { useState } from "react";
-import Navbar from "../Components/Navbar";
 import Sidebar from "../Components/Sidebar";
 import SprintDetails from "../Components/SprintDetails";
 import ToDoList from "../Components/ToDoList";

@@ -15,7 +15,7 @@ const Sidebar = ({SelectedSprint, Sprint}) => {
       .then((val) => {
         setSprintList(val);
       });
-  }, []);
+  }, [url]);
 
   function ShowSprintCreateModal() {
     setSprintModalDisplay(true);
@@ -33,7 +33,7 @@ const Sidebar = ({SelectedSprint, Sprint}) => {
       method:"DELETE"
     }).then(res=>res.json()).then(val=>{
       let data = [...SprintList].filter((ele)=>{
-        return ele.sprintName!=sprintName;
+        return ele.sprintName!==sprintName;
       })
       setSprintList(data);
       console.log(sprintName);
@@ -58,7 +58,7 @@ const Sidebar = ({SelectedSprint, Sprint}) => {
       <div className="SprintList">
         {SprintList.map((ele,ind) => {
           return (
-            <div className="SprintTitle" key={ind+1} style={ele.sprintName==Sprint.sprintName ? {backgroundColor:"rgb(55, 23, 97)", color:"white"}:{backgroundColor:"inherit"}}>
+            <div className="SprintTitle" key={ind+1} style={ele.sprintName===Sprint.sprintName ? {backgroundColor:"rgb(55, 23, 97)", color:"white"}:{backgroundColor:"inherit"}}>
               <h4 onClick={()=>{SelectedSprint(ele); console.log(Sprint)}}>{ele.sprintName}</h4>
               <MdDelete className="DeleteIcon" onClick={()=>{DeleteSprint(ele._id, ele.sprintName)}}/>
             </div>

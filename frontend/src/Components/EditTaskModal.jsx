@@ -11,7 +11,6 @@ const EditTaskModal = ({ EditModal, HideEditModal, data = InitData, edited }) =>
     setFormDataModal(data);
   }, [data]);
 
-  let url = "https://taskplanner-ytz0.onrender.com//sprintList";
 
   function EditedFormDataFunc(e) {
     let { name, value } = e.target;

@@ -21,7 +21,7 @@ const ToDoList = ({ Data, UpdateList }) => {
         });
         setTaskListData(SprintTaskArray);
       });
-  }, [Data, UpdateList, isEdited]);
+  }, [Data, UpdateList, isEdited, taskUrl]);
 
   function DeleteTaskFun(id) {
     fetch(`https://taskplanner-ytz0.onrender.com/tasklist/${id}`, {
